@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Textos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-panel, .right-panel {
+            flex: 1;
+            margin: 10px;
+        }
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .right-panel img {
+            max-width: 100%;
+        }
+        h2 {
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+        small {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Encriptador de Textos</h2>
+            <textarea id="inputText" placeholder="Ingrese el texto aquí"></textarea>
+            <button onclick="encrypt()">Encriptar</button>
+            <button onclick="decrypt()">Desencriptar</button>
+            <textarea id="outputText" placeholder="Resultado" readonly></textarea>
+            <button onclick="copyText()">Copiar</button>
+            <div id="message"></div>
+            <small>Sólo letras minúsculas y sin acentos</small>
+        </div>
+        <div class="right-panel">
+            <img src="image-placeholder.png.png">
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
